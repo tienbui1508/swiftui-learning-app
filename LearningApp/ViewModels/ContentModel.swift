@@ -47,7 +47,7 @@ class ContentModel: ObservableObject {
         // Parse the style data
         let styleUrl = Bundle.main.url(forResource: "style", withExtension: "html")
         
-        //Read the fiule into a data obejct
+        //Read the file into a data obejct
         do {
             let styleData = try Data(contentsOf: styleUrl!)
             self.styleData = styleData

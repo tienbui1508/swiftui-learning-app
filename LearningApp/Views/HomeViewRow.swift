@@ -28,28 +28,37 @@ struct HomeViewRow: View {
                     .frame(width: 116, height: 116)
                     .clipShape(Circle())
                 
+                Spacer()
+                
                 VStack(alignment: .leading, spacing: 10) {
                     Text(title)
                         .bold()
                     Text(description)
+                        .font(.caption)
+                        .multilineTextAlignment(.leading)
                         .padding(.bottom, 20.0)
-                        .font(Font.system(size: 10))
                     
                     
                     HStack {
                         Image(systemName: "text.book.closed")
+                            .resizable()
+                            .frame(width: 15, height: 15)
                         Text(count)
-                        Spacer()
-                        Image(systemName: "clock")
-                        Text(time)
+                            .font(Font.system(size: 10))
                         
-                    } .font(Font.system(size: 10))
+                        Spacer()
+                        
+                        Image(systemName: "clock")
+                            .resizable()
+                            .frame(width: 15, height: 15)
+                        Text(time)
+                            .font(Font.system(size: 10))
+                    }
                 }
-                .padding()
+                .padding(.leading, 20)
             }
-            .padding()
+            .padding(.horizontal, 20)
         }
-        .padding()
     }
 }
 

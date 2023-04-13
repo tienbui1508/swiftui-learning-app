@@ -19,7 +19,7 @@ struct HomeView: View {
                 ScrollView {
                     LazyVStack  {
                         ForEach(model.modules) { module in
-                            VStack (spacing: 0) {
+                            VStack (spacing: 20) {
                                 NavigationLink {
                                     ContentView()
                                         .onAppear {
@@ -41,7 +41,7 @@ struct HomeView: View {
                             
                         }
                     }
-                    
+                    .padding()
                     .accentColor(.black)
                 }
             }

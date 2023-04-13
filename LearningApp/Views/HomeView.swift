@@ -12,16 +12,45 @@ struct HomeView: View {
     @EnvironmentObject var model: ContentModel
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(model.modules) { module in
-                    HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
+        NavigationView {
+            VStack(alignment: .leading) {
+                Text("What do you want to do today?")
+                    .padding(.leading, 20)
+                ScrollView {
+                    LazyVStack  {
+                        ForEach(model.modules) { module in
+                            VStack (spacing: 0) {
+                                NavigationLink {
+                                    ContentView()
+                                        .onAppear {
+                                            model.beginModule(module.id)
+                                        }
+                                } label: {
+                                    // Learning Card
+                                    HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
+                                }
+                                
+                                NavigationLink {
+                                    
+                                } label: {
+                                    
+                                    // Test Card
+                                    HomeViewRow(image: module.test.image, title: "\(module.category) Test", description: module.test.description, count: "\(module.test.questions.count) Lessons", time: module.test.time)
+                                }
+                            }
+                            
+                        }
+                    }
                     
-                    HomeViewRow(image: module.test.image, title: "\(module.category) Test", description: module.test.description, count: "\(module.test.questions.count) Lessons", time: module.test.time)
-                    
+                    .accentColor(.black)
                 }
             }
+            .navigationTitle("Get Started")
+
+            
+            
         }
+        
     }
 }
 

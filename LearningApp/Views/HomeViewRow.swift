@@ -44,8 +44,8 @@ struct HomeViewRow: View {
                         Text(time)
                         
                     } .font(Font.system(size: 10))
-                    
-                }.padding()
+                }
+                .padding()
             }
             .padding()
         }

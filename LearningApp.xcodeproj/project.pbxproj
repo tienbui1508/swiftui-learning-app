@@ -18,6 +18,9 @@
 		7C2BB14E29E6EDD60077C7AE /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BB14D29E6EDD60077C7AE /* HomeViewRow.swift */; };
 		7C2BB15029E7EB9D0077C7AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BB14F29E7EB9D0077C7AE /* ContentView.swift */; };
 		7C2BB15229E816100077C7AE /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BB15129E816100077C7AE /* ContentViewRow.swift */; };
+		7C8148EB29E9838700BBED6F /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8148EA29E9838700BBED6F /* ContentDetailView.swift */; };
+		7C8148EE29E98A1200BBED6F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8148ED29E98A1200BBED6F /* AVKit.framework */; };
+		7C8148F029E98AE700BBED6F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8148EF29E98AE700BBED6F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		7C2BB14D29E6EDD60077C7AE /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		7C2BB14F29E7EB9D0077C7AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C2BB15129E816100077C7AE /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
+		7C8148EA29E9838700BBED6F /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		7C8148ED29E98A1200BBED6F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		7C8148EF29E98AE700BBED6F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8148EE29E98A1200BBED6F /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,7 @@
 			children = (
 				7C2BB13129E570800077C7AE /* LearningApp */,
 				7C2BB13029E570800077C7AE /* Products */,
+				7C8148EC29E98A1200BBED6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +99,7 @@
 				7C2BB13429E570800077C7AE /* HomeView.swift */,
 				7C2BB14F29E7EB9D0077C7AE /* ContentView.swift */,
 				7C2BB15129E816100077C7AE /* ContentViewRow.swift */,
+				7C8148EA29E9838700BBED6F /* ContentDetailView.swift */,
 				7C2BB14D29E6EDD60077C7AE /* HomeViewRow.swift */,
 			);
 			path = Views;
@@ -116,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				7C2BB14729E58E7E0077C7AE /* data.json */,
+				7C8148EF29E98AE700BBED6F /* Constants.swift */,
 				7C2BB14829E58E7E0077C7AE /* style.html */,
 			);
 			path = Resources;
@@ -126,6 +136,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7C8148EC29E98A1200BBED6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C8148ED29E98A1200BBED6F /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +221,12 @@
 				7C2BB13529E570800077C7AE /* HomeView.swift in Sources */,
 				7C2BB14E29E6EDD60077C7AE /* HomeViewRow.swift in Sources */,
 				7C2BB15029E7EB9D0077C7AE /* ContentView.swift in Sources */,
+				7C8148EB29E9838700BBED6F /* ContentDetailView.swift in Sources */,
 				7C2BB13329E570800077C7AE /* LearningApp.swift in Sources */,
 				7C2BB15229E816100077C7AE /* ContentViewRow.swift in Sources */,
 				7C2BB14629E572520077C7AE /* ContentModel.swift in Sources */,
 				7C2BB14C29E5A4850077C7AE /* Models.swift in Sources */,
+				7C8148F029E98AE700BBED6F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

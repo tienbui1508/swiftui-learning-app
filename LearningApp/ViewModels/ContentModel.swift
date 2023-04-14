@@ -13,9 +13,14 @@ class ContentModel: ObservableObject {
     @Published var modules = [Module]()
     
     
-        //Current module
+    //Current module
     @Published var currentModule: Module?
     var currentModuleIndex = 0
+    
+    // Current lesson
+    @Published var currentLesson: Lesson?
+    var currentLessonIndex = 0
+    
     
     var styleData: Data?
     
@@ -45,7 +50,7 @@ class ContentModel: ObservableObject {
             catch {
                 print(error)
             }
-        
+            
         }
         catch {
             // TODO log error
@@ -83,4 +88,39 @@ class ContentModel: ObservableObject {
         currentModule = modules[currentModuleIndex]
     }
     
+    func beginLesson(_ lessonIndex: Int) {
+        
+        // CHeck that the lesson index is within the rang of module lessons
+        if lessonIndex < currentModule!.content.lessons.count {
+            currentLessonIndex = lessonIndex
+            
+        } else {
+            currentLessonIndex = 0
+        }
+        
+        // Set the current lesson
+        currentLesson = currentModule!.content.lessons[currentLessonIndex]
+    }
+    
+    func nextLesson() {
+        
+        // ADvance the lesson incex
+        currentLessonIndex += 1
+        
+        // Check that it is within range
+        if currentLessonIndex < currentModule!.content.lessons.count {
+            
+            //Set the current lesson property
+            currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        }
+        else {
+            // Reset the lesson state
+            currentLessonIndex = 0
+            currentLesson = nil
+        }
+    }
+    
+    func hasNextLesson() -> Bool {
+        return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
+    }
 }

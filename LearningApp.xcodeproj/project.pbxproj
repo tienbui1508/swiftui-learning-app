@@ -18,6 +18,7 @@
 		7C2BB14E29E6EDD60077C7AE /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BB14D29E6EDD60077C7AE /* HomeViewRow.swift */; };
 		7C2BB15029E7EB9D0077C7AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BB14F29E7EB9D0077C7AE /* ContentView.swift */; };
 		7C2BB15229E816100077C7AE /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BB15129E816100077C7AE /* ContentViewRow.swift */; };
+		7C63A57B29EC3D4B00850BD8 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63A57A29EC3D4B00850BD8 /* CodeTextView.swift */; };
 		7C8148EB29E9838700BBED6F /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8148EA29E9838700BBED6F /* ContentDetailView.swift */; };
 		7C8148EE29E98A1200BBED6F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8148ED29E98A1200BBED6F /* AVKit.framework */; };
 		7C8148F029E98AE700BBED6F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8148EF29E98AE700BBED6F /* Constants.swift */; };
@@ -36,6 +37,7 @@
 		7C2BB14D29E6EDD60077C7AE /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		7C2BB14F29E7EB9D0077C7AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C2BB15129E816100077C7AE /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
+		7C63A57A29EC3D4B00850BD8 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		7C8148EA29E9838700BBED6F /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		7C8148ED29E98A1200BBED6F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		7C8148EF29E98AE700BBED6F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				7C2BB14F29E7EB9D0077C7AE /* ContentView.swift */,
 				7C2BB15129E816100077C7AE /* ContentViewRow.swift */,
 				7C8148EA29E9838700BBED6F /* ContentDetailView.swift */,
+				7C63A57A29EC3D4B00850BD8 /* CodeTextView.swift */,
 				7C2BB14D29E6EDD60077C7AE /* HomeViewRow.swift */,
 			);
 			path = Views;
@@ -224,6 +227,7 @@
 				7C8148EB29E9838700BBED6F /* ContentDetailView.swift in Sources */,
 				7C2BB13329E570800077C7AE /* LearningApp.swift in Sources */,
 				7C2BB15229E816100077C7AE /* ContentViewRow.swift in Sources */,
+				7C63A57B29EC3D4B00850BD8 /* CodeTextView.swift in Sources */,
 				7C2BB14629E572520077C7AE /* ContentModel.swift in Sources */,
 				7C2BB14C29E5A4850077C7AE /* Models.swift in Sources */,
 				7C8148F029E98AE700BBED6F /* Constants.swift in Sources */,

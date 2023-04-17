@@ -18,16 +18,19 @@ struct ContentView: View {
                 if model.currentModule != nil {
                     ForEach(0..<model.currentModule!.content.lessons.count) { index in
                         
-                        NavigationLink {
-                            ContentDetailView()
+                        NavigationLink (
+                            destination:
+                                ContentDetailView()
                                 .onAppear {
                                     model.beginLesson(index)
-                                }
-                        } label: {
-                            ContentViewRow(index: index)
-                        }
-
-                       
+                                },
+                            label: {
+                                ContentViewRow(index: index)
+                            }
+                            
+                        )
+                        
+                        
                     }
                 }
                 

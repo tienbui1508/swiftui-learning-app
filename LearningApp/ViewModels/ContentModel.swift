@@ -140,7 +140,7 @@ class ContentModel: ObservableObject {
     
     func beginTest(_ moduleId:Int) {
         // Set the current module
-        beginLesson(moduleId)
+        beginModule(moduleId)
         
         // Set the current question
         currentQuestionIndex = 0

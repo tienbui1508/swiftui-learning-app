@@ -20,6 +20,7 @@
 		7C2BB15229E816100077C7AE /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BB15129E816100077C7AE /* ContentViewRow.swift */; };
 		7C63A57B29EC3D4B00850BD8 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63A57A29EC3D4B00850BD8 /* CodeTextView.swift */; };
 		7C63A59929EDB07F00850BD8 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63A59829EDB07F00850BD8 /* RectangleCard.swift */; };
+		7C63A5B729EEDDC000850BD8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63A5B629EEDDC000850BD8 /* TestView.swift */; };
 		7C8148EB29E9838700BBED6F /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8148EA29E9838700BBED6F /* ContentDetailView.swift */; };
 		7C8148EE29E98A1200BBED6F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8148ED29E98A1200BBED6F /* AVKit.framework */; };
 		7C8148F029E98AE700BBED6F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8148EF29E98AE700BBED6F /* Constants.swift */; };
@@ -40,6 +41,7 @@
 		7C2BB15129E816100077C7AE /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
 		7C63A57A29EC3D4B00850BD8 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		7C63A59829EDB07F00850BD8 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
+		7C63A5B629EEDDC000850BD8 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		7C8148EA29E9838700BBED6F /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		7C8148ED29E98A1200BBED6F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		7C8148EF29E98AE700BBED6F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				7C2BB13429E570800077C7AE /* HomeView.swift */,
 				7C2BB14F29E7EB9D0077C7AE /* ContentView.swift */,
+				7C63A5B629EEDDC000850BD8 /* TestView.swift */,
 				7C2BB15129E816100077C7AE /* ContentViewRow.swift */,
 				7C8148EA29E9838700BBED6F /* ContentDetailView.swift */,
 				7C63A59829EDB07F00850BD8 /* RectangleCard.swift */,
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C63A5B729EEDDC000850BD8 /* TestView.swift in Sources */,
 				7C2BB13529E570800077C7AE /* HomeView.swift in Sources */,
 				7C2BB14E29E6EDD60077C7AE /* HomeViewRow.swift in Sources */,
 				7C2BB15029E7EB9D0077C7AE /* ContentView.swift in Sources */,

@@ -33,13 +33,27 @@ struct HomeView: View {
                                         HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
                                     })
                                 
-                                NavigationLink {
-                                        
-                                    } label: {
+                                NavigationLink (
+                                    destination:
+                                        TestView()
+                                        .onAppear {
+                                            model.beginTest(module.id)
+                                            
+                                        },
+                                    tag: module.id,
+                                    selection: $model.currentTestSelected,
+                                    label: {
                                         
                                         // Test Card
                                         HomeViewRow(image: module.test.image, title: "\(module.category) Test", description: module.test.description, count: "\(module.test.questions.count) Lessons", time: module.test.time)
-                                    }
+                                    })
+                                
+                                NavigationLink  {
+                                    EmptyView()
+                                } label: {
+                                    EmptyView()
+                                }
+
                             }
                             
                         }
@@ -49,7 +63,7 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("Get Started")
-
+            
             
             
         }

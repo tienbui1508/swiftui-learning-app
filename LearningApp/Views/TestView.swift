@@ -107,9 +107,11 @@ struct TestView: View {
             .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
         }
         else {
-            ProgressView()
+            // Show the resultView
+            TestResultView(numCorrect: numCorrect)
         }
     }
+    
     var buttonText: String {
         if submitted == true {
             if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count {

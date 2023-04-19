@@ -116,7 +116,7 @@ class ContentModel: ObservableObject {
     
     func nextLesson() {
         
-        // ADvance the lesson incex
+        // Advance the lesson incex
         currentLessonIndex += 1
         
         // Check that it is within range
@@ -131,6 +131,29 @@ class ContentModel: ObservableObject {
             currentLessonIndex = 0
             currentLesson = nil
         }
+    }
+    
+    func nextQuestion() {
+        
+        // Advance the question incex
+        currentQuestionIndex += 1
+        
+        // Check that it is within range
+        if currentQuestionIndex < currentModule!.content.lessons.count {
+            //Set the current lesson property
+            
+            currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+            codeText = addStyling(currentQuestion!.content)
+            
+        }
+        else {
+            // Reset the lesson state
+            currentQuestionIndex = 0
+            currentQuestion = nil
+        }
+    
+     
+        
     }
     
     func hasNextLesson() -> Bool {

@@ -32,7 +32,7 @@ struct TestResultView: View {
             Text(resultHeading)
                 .font(.title)
             
-            Text("You got \(numCorrect) out of \(model.currentModule!.test.questions.count)")
+            Text("You got \(numCorrect) out of \(model.currentModule?.test.questions.count ?? 0)")
             
             Button {
                 // Send user back to the homeview

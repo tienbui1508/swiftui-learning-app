@@ -12,9 +12,10 @@ struct TestView: View {
     @State var selectedAnswerIndex: Int?
     @State var numCorrect = 0
     @State var submitted = false
+    @State var showResult = false
     
     var body: some View {
-        if model.currentQuestion != nil {
+        if model.currentQuestion != nil && showResult == false {
             VStack (alignment: .leading) {
                 // Question number
                 Text("Question \(model.currentQuestionIndex + 1) of \(model.currentModule?.test.questions.count ?? 0)")
@@ -29,7 +30,7 @@ struct TestView: View {
                     VStack {
                         ForEach (0..<model.currentQuestion!.answers.count, id: \.self) { index in
                             Button {
-                             
+                                
                                 // Track the selected index
                                 selectedAnswerIndex = index
                             } label: {
@@ -44,12 +45,12 @@ struct TestView: View {
                                             RectangleCard(color: .green)
                                         }
                                         else if index == selectedAnswerIndex &&
-                                            index != model.currentQuestion!.correctIndex {
+                                                    index != model.currentQuestion!.correctIndex {
                                             RectangleCard(color: .red)
                                         }
                                         else if index == model.currentQuestion!.correctIndex {
                                             RectangleCard(color: .green)
-
+                                            
                                         }
                                         else {
                                             RectangleCard(color: .white)
@@ -72,25 +73,34 @@ struct TestView: View {
                 // Button
                 Button {
                     if submitted == true {
-                        //next question
-                        model.nextQuestion()
                         
+                        
+                        // Check for last question
+                        
+                        if model.currentQuestionIndex + 1 == model.currentModule?.test.questions.count {
+                            showResult = true
+                        } else {
+                            //next question
+                            model.nextQuestion()
                             //reset
-                        submitted = false
-                        selectedAnswerIndex = nil
+                            submitted = false
+                            selectedAnswerIndex = nil
+                        }
+                        
                     }
                     else
                     {
                         // Submitted
                         submitted = true
                         
-                       // Check the answer and increment the counter if corrent
+                        
+                        // Check the answer and increment the counter if corrent
                         if selectedAnswerIndex == model.currentQuestion!.correctIndex {
                             numCorrect += 1
                         }
                     }
                     
-                 
+                    
                 } label: {
                     ZStack {
                         RectangleCard(color: .green)
@@ -101,20 +111,22 @@ struct TestView: View {
                     .padding()
                 }
                 .disabled(selectedAnswerIndex == nil)
-
-
+                
+                
             }
             .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
         }
-        else {
+        else if showResult == true {
             // Show the resultView
             TestResultView(numCorrect: numCorrect)
+        } else {
+            ProgressView()
         }
     }
     
     var buttonText: String {
         if submitted == true {
-            if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count {
+            if model.currentQuestionIndex + 1 == model.currentModule?.test.questions.count ?? 0 {
                 return "Finish"
             }
             else {
